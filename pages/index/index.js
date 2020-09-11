@@ -6,6 +6,12 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
+    pepInfo: [
+      {name: 'Heaven', age: 18, sex: 'boy'},
+      {name: 'Hurst', age: 28, sex: 'boy'},
+      {name: 'Xing', age: 8, sex: 'girl'}
+    ],
+    counter: 0,
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -13,6 +19,16 @@ Page({
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  addNum: function(){
+    this.setData({
+      counter:  this.data.counter + 1
+    })
+  },
+  subNum: function(){
+    this.setData({
+      counter:  this.data.counter - 1
     })
   },
   onLoad: function () {
