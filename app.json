@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/home/home",
     "pages/logs/logs",
     "pages/category/category",
     "pages/cart/cart",
@@ -17,7 +17,7 @@
   "tabBar": {
     "selectedColor": "#ff5777",
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/home/home",
       "text": "home",
       "iconPath": "assets/tabbar/home.png",
       "selectedIconPath": "assets/tabbar/home_active.png"
