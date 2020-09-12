@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
+    "pages/category/category",
+    "pages/cart/cart",
     "pages/profile/profile"
   ],
   "window": {
@@ -10,15 +12,29 @@
     "navigationBarTitleText": "小程序",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "tabBar": {
+    "selectedColor": "#ff5777",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "text",
+      "text": "home",
       "iconPath": "assets/tabbar/home.png",
       "selectedIconPath": "assets/tabbar/home_active.png"
-    },{
+    },
+    {
+      "pagePath": "pages/category/category",
+      "text": "category",
+      "iconPath": "assets/tabbar/category.png",
+      "selectedIconPath": "assets/tabbar/category_active.png"
+    },
+    {
+      "pagePath": "pages/cart/cart",
+      "text": "cart",
+      "iconPath": "assets/tabbar/cart.png",
+      "selectedIconPath": "assets/tabbar/cart_active.png"
+    },
+    {
       "pagePath": "pages/profile/profile",
       "text": "profile",
       "iconPath": "assets/tabbar/profile.png",
