@@ -3,7 +3,8 @@
     "w-swiper": "/components/w-swiper/w-swiper",
     "w-recommend": "./childComps/w-recommend/w-recommend",
     "w-popular": "./childComps/w-popular/w-popular",
-    "w-tab-control": "/components/w-tab-control/w-tab-control"
+    "w-tab-control": "/components/w-tab-control/w-tab-control",
+    "w-goods": "/components/w-goods/w-goods"
   },
   "navigationBarTitleText": "星星购物"
 }

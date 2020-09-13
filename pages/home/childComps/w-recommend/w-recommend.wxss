@@ -11,7 +11,7 @@
   text-align: center;
 }
 
-.recommend-item image {
+.img {
   width: 160rpx;
   height: 160rpx;
 }

@@ -18,7 +18,7 @@
   color: #ff5777;
 }
 
-.active text {
+.active .text {
   padding: 16rpx 10rpx;
   border-bottom: 6rpx solid #ff5777;
 }
