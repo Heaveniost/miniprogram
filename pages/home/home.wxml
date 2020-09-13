@@ -13,3 +13,6 @@
 
 <!-- 5.展示商品列表 -->
 <w-goods goods="{{ goods[currentType].list }}"></w-goods>
+
+<!-- 6.回到顶部按钮 -->
+<w-back-top  wx:if="{{ showBacktop}}"></w-back-top>

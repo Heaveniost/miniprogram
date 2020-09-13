@@ -7,7 +7,9 @@ import {
 //获取应用实例
 const app = getApp()
 
+const TOP_DISTANCE = 1000
 const types = ['pop', 'new', 'sell']
+
 Page({
   data: {
     banners: [],
@@ -18,7 +20,8 @@ Page({
       pop: {page: 0, list: []},
       sell: {page: 0, list: []}
     },
-    currentType: 'pop'
+    currentType: 'pop',
+    showBacktop: false
   },
   onLoad: function (options) {
     this._getMultidata()
@@ -71,5 +74,19 @@ Page({
   onReachBottom() {
     // 下拉加载更多 -> 请求新的数据
     this._getGoodsdata(this.data.currentType)
+  },
+  
+  onPageScroll(options){
+    // console.log(options)
+    // 频繁的调用setData函数并不好 
+    // this.setData({
+    //   showBacktop: options.scrollTop >= TOP_DISTANCE
+    // })
+    const flag = options.scrollTop >= TOP_DISTANCE
+    if(flag != this.data.showBacktop){
+      this.setData({
+        showBacktop: flag
+      })
+    }
   }
 })

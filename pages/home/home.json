@@ -4,7 +4,8 @@
     "w-recommend": "./childComps/w-recommend/w-recommend",
     "w-popular": "./childComps/w-popular/w-popular",
     "w-tab-control": "/components/w-tab-control/w-tab-control",
-    "w-goods": "/components/w-goods/w-goods"
+    "w-goods": "/components/w-goods/w-goods",
+    "w-back-top": "/components/w-back-top/w-back-top"
   },
   "navigationBarTitleText": "星星购物"
 }
