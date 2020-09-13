@@ -21,7 +21,9 @@ Page({
       sell: {page: 0, list: []}
     },
     currentType: 'pop',
-    showBacktop: false
+    showBacktop: false,
+    isTabfixed: false,
+    tabScrollTop: 0
   },
   onLoad: function (options) {
     this._getMultidata()
@@ -71,6 +73,13 @@ Page({
       currentType: types[index]
     })
   },
+  handleImageload() {
+    wx.createSelectorQuery().select('#tab-control').boundingClientRect(rect => {
+      this.data.tabScrollTop = rect.top
+      console.log(this.data.tabScrollTop)
+    }).exec()
+  },
+
   onReachBottom() {
     // 下拉加载更多 -> 请求新的数据
     this._getGoodsdata(this.data.currentType)
@@ -82,10 +91,17 @@ Page({
     // this.setData({
     //   showBacktop: options.scrollTop >= TOP_DISTANCE
     // })
-    const flag = options.scrollTop >= TOP_DISTANCE
-    if(flag != this.data.showBacktop){
+    const flag1 = options.scrollTop >= TOP_DISTANCE
+    if(flag1 != this.data.showBacktop){
       this.setData({
-        showBacktop: flag
+        showBacktop: flag1
+      })
+    }
+    //修改isTabfixed属性
+    const flag2 = options.scrollTop >= this.data.tabScrollTop;
+    if (flag2 != this.data.isTabfixed) {
+      this.setData({
+        isTabfixed: flag2
       })
     }
   }
